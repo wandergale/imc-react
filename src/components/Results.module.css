@@ -1,0 +1,25 @@
+.tableCalc {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  margin: 20px 20px 0 20px;
+  border-radius: 10px;
+}
+
+thead {
+  /* border-bottom: 1px solid #ccc; */
+  margin: 5px 5px 5px 5px;
+  font-size: 1.2em;
+}
+
+tbody {
+  margin: 5px 5px 5px 5px;
+
+  & td {
+    width: 200px;
+    text-align: center;
+    vertical-align: middle;
+    padding: 8px;
+    border: 1px solid #ccc;
+  }
+}
