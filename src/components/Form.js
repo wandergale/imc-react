@@ -16,29 +16,35 @@ const Form = () => {
 
     const imc = weightNum / Math.pow(heightNum, 2);
     setImc(imc.toFixed(2));
+
+    // zerando
+    setHeight("");
+    setWeight("");
   };
 
   return (
     <>
       <form onSubmit={handleSubmit} className={style.formContainer}>
-        <label>
-          Altura
+        <div className={style.grupoHeight}>
           <input
             type="text"
-            name="altura"
-            placeholder="Sua altura em cm..."
+            name="height"
+            value={height}
             onChange={(e) => setHeight(e.target.value)}
+            required
           />
-        </label>
-        <label>
-          Peso
+          <label for="height">Altura</label>
+        </div>
+        <div className={style.grupoWeight}>
           <input
             type="text"
-            name="peso"
-            placeholder="Seu peso em kg's"
+            name="weight"
+            value={weight}
             onChange={(e) => setWeight(e.target.value)}
+            required
           />
-        </label>
+          <label for="weight">Peso</label>
+        </div>
         <input type="submit" value="Calcular" className={style.btnForm} />
       </form>
 

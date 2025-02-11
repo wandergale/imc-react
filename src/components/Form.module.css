@@ -4,20 +4,44 @@
   color: #fff;
   margin: 0 50px 0 50px;
   align-items: center;
+}
 
-  & label {
-    font-size: 1.2em;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 10px;
-  }
-  & input[type="text"] {
-    width: 100%;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
+.grupoHeight {
+  position: absolute;
+}
+
+.grupoWeight {
+  margin-top: 40px;
+  position: relative;
+}
+
+label {
+  color: #fff;
+  padding: 0 5px;
+  position: absolute;
+  transform: translateY(-50%);
+  top: 50%;
+  left: 1em;
+  pointer-events: none;
+  transition: 0.3s;
+}
+
+input[type="text"] {
+  color: #fff;
+  border: 2px solid #fff;
+  background: transparent;
+  border-radius: 5px;
+  width: 150px;
+  height: 25px;
+  padding: 0 1rem;
+  outline: none;
+}
+
+input:focus ~ label,
+input:valid ~ label {
+  top: 0;
+  background-color: #000;
+  font-size: 0.7rem;
 }
 
 .btnForm {
@@ -31,4 +55,5 @@
 h3 {
   color: #fff;
   text-align: center;
+  transition: .5s;
 }
